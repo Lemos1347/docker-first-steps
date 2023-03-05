@@ -13,6 +13,7 @@ Containers são uma maneira de isolar processos locais em sua máquina. Ao contr
 Em docker iremos separar em três tópicos:
 
 - Dockerfile
+- Dockerignore files
 - Docker-compose
 - Docker Hub
 
@@ -89,6 +90,10 @@ docker run -d -p 80:3001 nomedousuario/nomedoprojeto
 
 Nesse comando, os primeiro números antes dos `:` representa as portas do sistema princial e os após representa as portas do container.  
 Pronto! O seu primeiro container está funcionando!
+
+### Dockerignore files
+
+Em um projeto temos várias pastas e arquivos que nem sempre precisamos de tudo para rodar uma aplicação (pode ser desde documentação até uma venv ou um node_modules) os quais não precisam de serem copiados para o container. Para isso, podemos criar um arquivo `.dockerignore` contento os diretórios em que não queremos que sejam levados para o container (similar a um `.gitignore`).
 
 ### Docker-compose
 
