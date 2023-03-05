@@ -1,0 +1,9 @@
+version: "3"
+services:
+  backend:
+    build: .
+    container_name: flask_minimal_aplication
+    ports:
+      - "3001:3001"
+    volumes:
+      - $PWD:/backend
